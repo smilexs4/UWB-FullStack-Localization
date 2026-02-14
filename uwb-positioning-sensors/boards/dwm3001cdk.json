@@ -1,0 +1,43 @@
+{
+  "build": {
+    "core": "nRF5",
+    "cpu": "cortex-m4",
+    "f_cpu": "64000000L",
+    "mcu": "nrf52833",
+    "variant": "pca10100",
+    "extra_flags": "-DNRF52833_XXAA",
+    "ldscript": "nrf52833_s140_v7.ld",
+    "bsp": {
+      "name": "adafruit"
+    },
+    "softdevice": {
+      "sd_flags": "-DS140",
+      "sd_name": "s140",
+      "sd_version": "7.3.0",
+      "sd_fwid": "0x0123"
+    },
+    "usb_product": "DWM3001CDK",
+    "hwids": [
+      ["0x239A", "0x8029"],
+      ["0x239A", "0x0029"],
+      ["0x239A", "0x002A"],
+      ["0x239A", "0x802A"]
+    ]
+  },
+  "debug": {
+    "openocd_target": "nrf52.cfg"
+  },
+  "frameworks": ["arduino", "zephyr"],
+  "name": "Nordic nRF52833 DK (PCA10100)",
+  "upload": {
+    "maximum_ram_size": 106496,
+    "maximum_size": 286720,
+    "protocol": "nrfutil",
+    "use_1200bps_touch": true,
+    "wait_for_upload_port": true,
+    "require_upload_port": true,
+    "speed": 115200
+  },
+  "url": "https://www.nordicsemi.com/Products/Development-hardware/nrf52833-dk",
+  "vendor": "Nordic Semiconductor"
+}
